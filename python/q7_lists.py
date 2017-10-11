@@ -7,7 +7,6 @@ def match_ends(words):
     Given a list of strings, return the count of the number of strings
     where the string length is 2 or more and the first and last chars
     of the string are the same.
-
     >>> match_ends(['aba', 'xyz', 'aa', 'x', 'bbb'])
     3
     >>> match_ends(['', 'x', 'xy', 'xyx', 'xx'])
@@ -15,7 +14,10 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    if type(words)!=list:
+        raise NotImplementedError("input must be a list")
+    return(len(list(filter(lambda x: len(x) >1 and x[0]==x[-1], words))))
+
 
 
 def front_x(words):
@@ -24,7 +26,6 @@ def front_x(words):
     order, except group all the strings that begin with 'x' first.
     e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
          ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'].
-
     >>> front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
     ['xaa', 'xzz', 'axx', 'bbb', 'ccc']
     >>> front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa'])
@@ -32,8 +33,16 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    if type(words)!=list:
+        raise NotImplementedError("input must be a list") 
+    return(sorted(list(filter(lambda x: x[0]=="x",words)))+(sorted(list(filter(lambda x: x[0]!="x",words)))))
 
+
+
+    
+
+ 
+    
 
 def sort_last(tuples):
     """
@@ -41,7 +50,6 @@ def sort_last(tuples):
     increasing order by the last element in each tuple.
     e.g. [(1, 7), (1, 3), (3, 4, 5), (2, 2)] yields
          [(2, 2), (1, 3), (3, 4, 5), (1, 7)].
-
     >>> sort_last([(1, 3), (3, 2), (2, 1)])
     [(2, 1), (3, 2), (1, 3)]
     >>> sort_last([(2, 3), (1, 2), (3, 1)])
@@ -49,7 +57,11 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    if type(words)!=list:
+        raise NotImplementedError("input must be a list")
+    return(sorted(tuples, key=lambda x: x[-1]))
+
+
 
 
 def remove_adjacent(nums):
@@ -68,7 +80,18 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    
+    if type(words)!=list:
+        raise NotImplementedError("input must be a list")
+    if nums==[]:
+        return([])
+
+    res=[nums[0]]
+    for i in range(1,len(nums)):
+        if nums[i]!=res[-1]:
+            res=res+[nums[i]]
+    return(res)
+    
 
 
 def linear_merge(list1, list2):
@@ -85,4 +108,28 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    
+
+    if type(list1)!=list or type(list2)!=list:
+        raise NotImplementedError("inputs must be lists")
+    i1=0
+    i2=0
+    res=[]
+    while i1<len(list1) and i2<len(list2):
+        if list1[i1]<list2[i2]:
+            res=res+[list1[i1]]
+            i1+=1
+        elif list1[i1]>list2[i2]:
+            res=res+[list2[i2]]
+            i2+=1
+        else:
+            res=res+[list2[i2]]+[list1[i1]]
+            i1+=1
+            i2+=1
+    if i1<len(list1):
+        res=res+list1[i1:]
+    else:
+        res=res+list2[i2:]
+        
+    # LINEAR COMPLEXITY!
+    return(res)
