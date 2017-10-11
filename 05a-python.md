@@ -101,6 +101,7 @@ Example of Dictionary comprhension:
 {n:[p["name"] for p in friends].count(n) for n in set([r["name"] for r in friends])}
 ```
 
+Example of Set comprhension:
 ```python
 # with reference to code in Q2,the following line builds a set with
 # my best friends'name whose lenght is less than 4,each taken only 1 time 
@@ -118,9 +119,9 @@ a.
 ```
 date_start = '01-02-2013'    
 date_stop = '07-28-2015'
-```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+```
+937
 
 b.  
 ```
@@ -128,7 +129,8 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+-82
+
 
 c.  
 ```
@@ -136,7 +138,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+7850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
