@@ -60,12 +60,12 @@ Despite an initial scepticism due to compatibility concerns I have read on the i
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
 
-To check for installations I would run this command:
-which -a python python3
+To check for installations I would run this command:  
+*which -a python python3*  
 
-Dpeending on the previous command output, I would run either or both commands below
->python3 --version 
->python --version 
+Dpeending on the previous command output, I would run either or both commands below:  
+*>python3 --version*  
+*>python --version*  
 
 
  
