@@ -121,7 +121,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 
 ```
-937
+937 days
 
 b.  
 ```
@@ -129,8 +129,12 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
--82
+82 days
 
+#Technically it would make -82 but I consider negative days as meaningless.
+#On the other hand, date_start-date_stop is not an option since 
+#it would not be the same as date_stop-date_start not even taking the absolute values. 
+#I therefore took the absolute value of date_stop-date_end after conversion
 
 c.  
 ```
@@ -138,7 +142,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
-7850
+7850 days
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
