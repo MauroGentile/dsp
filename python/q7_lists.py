@@ -131,5 +131,7 @@ def linear_merge(list1, list2):
     else:
         res=res+list2[i2:]
         
-    # LINEAR COMPLEXITY!
+    # The proposed solution is verbose. I could have joined the 2 lists and then sort them. 
+    # But I believe this is much more efficient since it uses the inverted list concept  
+    # LINEAR COMPLEXITY!
     return(res)
