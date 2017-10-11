@@ -175,4 +175,10 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    if type(a)!=str or type(b)!=str:
+        raise NotImplementedError("inputs must be strings")
+    if len(a)==0 or len(b)==0:
+        raise NotImplementedError("inputs must have a non zero length")
+    
+    import math
+    return(a[0:math.ceil(len(a)/2)]+b[0:math.ceil(len(b)/2)]+a[math.ceil(len(a)/2):]+b[math.ceil(len(b)/2):])
