@@ -12,7 +12,10 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+They both are an order collection of items but while lists are mutable (i.e. can be modified), tuples are immutable.
+This difference enables tuples to be keys for a dictionary.
+In facts, dictionary keys must be immutable. 
+this is why tuple can work as key in dictionaries while lists cannot.
 
 ---
 
@@ -20,7 +23,34 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+They are both mutable collection of items but with three major differences:
+- lists are ordered collections. Sets are unordered menaing that lists support indexing while sets do not
+- lists can include duplicates, set only contains unique values
+- lists can be multidimensional, sets cannot
+
+
+The unordered nature of sets makes them much faster in finding elements compared to lists which are ordered.
+Sets support operations of math's set theory and are very useful when it is time to extract unique elements from a list
+
+
+Example:
+```python
+#Dictionary of my best friend names:
+friends=[{"name":"Ann", "surname":"Smith"},
+        {"name":"Bob", "surname":"Randall"},
+        {"name":"Ann", "surname":"Vitolo"},
+        {"name":"Mary", "surname":"Jene"},
+        {"name":"Bob", "surname":"Geldof"},
+        {"name":"Niel", "surname":"O'Nieal"}]
+        
+#Complete  names:
+[n["name"]+","+n["surname"] for n in friends]
+
+#Unique names
+set([n["name"] for n in friends])
+```
+
+
 
 ---
 
