@@ -58,15 +58,54 @@ set([n["name"] for n in friends])
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+lambda function are anonymous one-line functions which make code much more readible.  
+Example:
+Back to the example above, imagine I want to order my best friends by surname:
 
+```python
+sorted(Complete_names, key=lambda x: x.split(",")[1])
+
+```
 ---
 
 ### Q4. List Comprehension, Map &amp; Filter
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+List comprehnsions are a powerful and fast way to build lists/sets/dictionaries in itarative way. 
+
+
+LC Example with its Map equivalent:
+```python
+#given a list of numbers, return a list of its elements squared
+import random
+A= random.sample(range(1, 100), 10)
+squared=[n**2 for n in A]
+squared_map=list(map(lambda x: x**2, A))
+```
+
+LC Example with its Filter equivalent:
+```python
+#given a list of numbers, filter the even ones
+import random
+A= random.sample(range(1, 100), 10)
+even=[n for n in A if n%2==0]
+even_filter=list(filter(lambda x: x%2==0, A))
+```
+
+
+Example of Dictionary comprhension:
+```python
+# with reference to code in Q2,the following line builds a dictionary with
+#  names of my best friends as key and occurence as value
+{n:[p["name"] for p in friends].count(n) for n in set([r["name"] for r in friends])}
+```
+
+```python
+# with reference to code in Q2,the following line builds a set with
+# my best friends'name whose lenght is less than 4,each taken only 1 time 
+{n for n in [n["name"] for n in friends] if len(n)<4}
+```
 
 ---
 
