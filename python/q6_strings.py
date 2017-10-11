@@ -1,14 +1,22 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 
-
 def donuts(count):
     """
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
     'many' instead of the actual count.
-
+    if not type(count)!=int
+        raise NotImplementedError("To be implemented") :
+    elif count<0:
+        raise NotImplementedError("To be implemented") 
+    elif count<10:
+        return("Number of donuts: "+str(count))
+    elif count>10:
+        return("Number of donuts: many")
+     
+    
     >>> donuts(4)
     'Number of donuts: 4'
     >>> donuts(9)
@@ -18,7 +26,17 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    if type(count)!=int:
+        raise NotImplementedError("input must be integer")
+    elif count<0:
+        raise NotImplementedError("To be implemented") 
+    elif count<10:
+        return("Number of donuts: "+str(count))
+    elif count>10:
+        return("Number of donuts: many")
+    else:
+        raise NotImplementedError("To be implemented")    
+        
 
 
 def both_ends(s):
@@ -37,7 +55,12 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if type(s)!=str:
+        raise NotImplementedError("Input must be a string") 
+    elif len(s)<2:
+        return("")
+    else:
+        return(s[0:2]+s[-2:])
 
 
 def fix_start(s):
@@ -56,8 +79,9 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
-
+    if type(s)!=str:
+        raise NotImplementedError("Input must be a string") 
+    return(s[0]+("".join([a if a!=s[0] else "*" for a in s[1:]]))) 
 
 def mix_up(a, b):
     """
@@ -74,7 +98,10 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    if type(a)!=str or type(b)!=str:
+        raise NotImplementedError ("Inputs must be strings") 
+    return(b[0:2]+a[2:]+" "+a[0:2]+b[2:])
+
 
 
 def verbing(s):
@@ -91,10 +118,17 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
-
+    if type(s)!=str:
+        raise NotImplementedError("Input must be a string") 
+    elif len(s)<3:
+        return(s)
+    elif s[-3:].lower()=="ing":
+        return(s+"ly")
+    elif s[-3:].lower()!="ing":
+        return(s+"ing")
 
 def not_bad(s):
+    import string
     """
     Given a string, find the first appearance of the substring 'not'
     and 'bad'. If the 'bad' follows the 'not', replace the whole
@@ -111,8 +145,19 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
-
+    if type(s)!=str:
+        raise NotImplementedError("input must be a string")
+    start=s.lower().find("not")
+    end=s.lower().find("bad")
+    if start==-1 or end==-1 or end<start:
+        return(s)
+    else: 
+        if end+3==len(s) or s[end+3:end+4] in string.punctuation:
+            return(not_bad(s[0:start].strip()+" good"+s[end+3:].strip()))    
+        else:
+            return(not_bad(s[0:start].strip()+" good "+s[end+3:].strip()))
+        
+        
 
 def front_back(a, b):
     """
