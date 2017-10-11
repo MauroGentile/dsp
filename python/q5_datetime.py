@@ -13,8 +13,11 @@ date_stop = '05282015'
 abs((datetime.fromtimestamp(int(date_stop))-datetime.fromtimestamp(int(date_start))).days)
 
 #result: 82 days. 
-#-82 days would be meaningless while date_start-date_stop would not be the same as date_stop-date_start 
-# not even taking the absolute values
+##Technically it would make -82 but I consider negative days as meaningless.
+#On the other hand, date_start-date_stop is not an option since 
+#it would not be the same as date_stop-date_start not even taking the absolute values. 
+#I therefore took the absolute value of date_stop-date_end after conversion
+
 
 
 ####c)  
