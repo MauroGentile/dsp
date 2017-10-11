@@ -48,13 +48,25 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I have installed Python 3.6.1 on my Mac
+Despite an initial scepticism due to compatibility concerns I have read on the internet, I have finally decided to go for the version 3 for 2 reasons:
+1)	v2 will be soon obsolete. Better to have an eye to the future rather than to the past
+2)	I have been using Python 2.7 and I got frustrated working with encodings…. As far as I know v3 makes encodings much simpler
+
+
 
 ### Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+
+To check for installations I would run this command:
+which -a python python3
+
+Dpeending on the previous command output, I would run either or both commands below
+>python3 --version 
+>python --version 
+
 
  
 
