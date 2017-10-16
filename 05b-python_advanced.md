@@ -19,9 +19,9 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 #### Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
-DEGREE
-Number of unique degrees: 9
-Frequencies:
+DEGREE  
+Number of unique degrees: 9  
+Frequencies:  
 {'scd': 6, 'phd': 31, 'md': 1, 'mph': 2, 'bsed': 1, 'ms': 2, 'jd': 1, 'ma': 1, '0': 1}
 
 
@@ -30,10 +30,9 @@ Frequencies:
 
 #### Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
-TITLES
-_______________________________
-Number of unique titles: 3
-Frequencies:
+TITLES  
+Number of unique titles: 3  
+Frequencies:  
 {'assistant professor': 12, 'associate professor': 12, 'professor': 13}
 
 
@@ -41,9 +40,8 @@ Frequencies:
 
 #### Q3. Search for email addresses and put them in a list.  Print the list of email addresses.
 
-EMAIL ADDRESSES
-_______________________________
-Email list:
+EMAIL ADDRESSES  
+Email list:  
 ['bellamys@mail.med.upenn.edu', 'warren@upenn.edu', 'bryanma@upenn.edu', 'jinboche@upenn.edu', 'sellenbe@upenn.edu', 'jellenbe@mail.med.upenn.edu', 'ruifeng@upenn.edu', 'bcfrench@mail.med.upenn.edu', 'pgimotty@upenn.edu', 'wguo@mail.med.upenn.edu', 'hsu9@mail.med.upenn.edu', 'rhubb@mail.med.upenn.edu', 'whwang@mail.med.upenn.edu', 'mjoffe@mail.med.upenn.edu', 'jrlandis@mail.med.upenn.edu', 'liy3@email.chop.edu', 'mingyao@mail.med.upenn.edu', 'hongzhe@upenn.edu', 'rlocalio@upenn.edu', 'nanditam@mail.med.upenn.edu', 'knashawn@mail.med.upenn.edu', 'propert@mail.med.upenn.edu', 'mputt@mail.med.upenn.edu', 'sratclif@upenn.edu', 'michross@upenn.edu', 'jaroy@mail.med.upenn.edu', 'msammel@cceb.med.upenn.edu', 'shawp@upenn.edu', 'rshi@mail.med.upenn.edu', 'hshou@mail.med.upenn.edu', 'jshults@mail.med.upenn.edu', 'alisaste@mail.med.upenn.edu', 'atroxel@mail.med.upenn.edu', 'rxiao@mail.med.upenn.edu', 'sxie@mail.med.upenn.edu', 'dxie@upenn.edu', 'weiyang@mail.med.upenn.edu']
 
 
@@ -54,9 +52,8 @@ Email list:
 #### Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
 DOMAINS
-_______________________________
-Number of unique domains: 4
-Frequencies:
+Number of unique domains: 4  
+Frequencies:  
 {'mail.med.upenn.edu': 23, 'upenn.edu': 12, 'email.chop.edu': 1, 'cceb.med.upenn.edu': 1}
 
 
