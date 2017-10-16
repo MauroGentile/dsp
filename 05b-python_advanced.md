@@ -23,8 +23,7 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 DEGREE  
 Number of unique degrees: 9  
 Frequencies:  
-{'scd': 6, 'phd': 31, 'md': 1, 'mph': 2, 'bsed': 1, 'ms': 2, 'jd': 1, 'ma': 1, '0': 1}
-
+{'scd': 6, 'phd': 31, 'md': 1, 'mph': 2, 'bsed': 1, 'ms': 2, 'jd': 1, 'ma': 1, 'error': 1}
 
 
 
