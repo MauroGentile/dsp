@@ -51,7 +51,7 @@ Email list:
 
 #### Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
-DOMAINS
+DOMAINS  
 Number of unique domains: 4  
 Frequencies:  
 {'mail.med.upenn.edu': 23, 'upenn.edu': 12, 'email.chop.edu': 1, 'cceb.med.upenn.edu': 1}
