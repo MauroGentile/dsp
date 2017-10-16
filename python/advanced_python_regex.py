@@ -2,7 +2,7 @@ import re
 from bs4 import BeautifulSoup
 
 
-#To produce the output, the lines at the bottom of this file have to be uncommented
+#To produce the output as submitted, the lines at the bottom of this file needs to be uncommented
 
 
 
@@ -21,6 +21,8 @@ degree={}
 def degree_list(data):
     for line in data:
         for j in [re.sub(r'[^a-zA-Z0-9]+', '', w) for w in line[1].strip().lower().split(" ")]:
+            if j=="" or j.isdigit():
+                j="error"
             degree[j]= degree.get(j,0)+1
     return(degree)
 
@@ -65,40 +67,41 @@ def domains_list(data):
     return(domains)
 
 
+
 """
 
-
 data=read_data("faculty.csv")
+
+# Q1
 print("\n")
-print("DEGREE")
-print("_______________________________")
+print("DEGREE  ")
 degree=degree_list(data)
-print("Number of unique degrees: "+str(len(degree)))
-print("Frequencies:")
+print("Number of unique degrees: "+str(len(degree))+"  ")
+print("Frequencies:  ")
 print(degree)
 print("\n")
 
 
-print("TITLES")
-print("_______________________________")
+# Q2
+print("TITLES  ")
 titles=titles_list(data)
-print("Number of unique titles: "+str(len(titles)))
-print("Frequencies:")
+print("Number of unique titles: "+str(len(titles))+"  ")
+print("Frequencies:  ")
 print(titles)
 print("\n")
 
-print("EMAIL ADDRESSES")
-print("_______________________________")
+# Q3
+print("EMAIL ADDRESSES  ")
 emails=email_addresses_list(data)
-print("Email list:")
+print("Email list:  ")
 print(emails)
 print("\n")
 
-print("DOMAINS")
-print("_______________________________")
+# Q4
+print("DOMAINS  ")
 domains=domains_list(data)
-print("Number of unique domains: "+str(len(domains)))
-print("Frequencies:")
+print("Number of unique domains: "+str(len(domains))+"  ")
+print("Frequencies:  ")
 print(domains)
 print("\n")
 """
