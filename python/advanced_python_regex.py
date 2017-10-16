@@ -16,7 +16,7 @@ for line in data:
     for j in [re.sub(r'[^a-zA-Z0-9]+', '', w) for w in line[1].strip().lower().split(" ")]:
         degree[j]= degree.get(j,0)+1
         
-print(degree)     
+print("Degree list:\n",degree)     
 
 
 #Q2
@@ -33,7 +33,7 @@ for line in data:
         m = p.match(line[2].strip().lower())
         if m:    
             titles[l]= titles.get(l,0)+1
-print(titles)
+print("\nTitle list and frequencies:\n",titles)   
 
 
 #Q3
@@ -42,7 +42,7 @@ email_addresses=[]
 for line in data:
     match = re.search(r'[\w\.-]+@[\w\.-]+', line[3])
     email_addresses.append(match.group(0))
-print(email_addresses)
+print("\nemail list:\n",email_addresses)  
 
 
 #Q4
@@ -53,4 +53,4 @@ for line in data:
     match = re.search(r'[\w\.-]+@([\w\.-]+)', line[3])
     domains[match.group(1)]= domains.get(match.group(1),0)+1
 
-print(domains)
+print("\nDomains list and frequencies:\n", domains)
