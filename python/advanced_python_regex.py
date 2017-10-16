@@ -46,7 +46,7 @@ for line in data:
 print(email_addresses)
 
 
-#Q3
+#Q4
 #_________________________________________________________________________________________________
 
 domains={}
@@ -54,4 +54,4 @@ for line in data:
     match = re.search(r'[\w\.-]+@([\w\.-]+)', line[3])
     domains[match.group(1)]= domains.get(match.group(1),0)+1
 
-domains
+print(domains)
