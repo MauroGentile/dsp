@@ -1,14 +1,13 @@
 import re                                                                      
- 
 from bs4 import BeautifulSoup
-soup = BeautifulSoup(open("faculty.csv"), "html.parser")
 
-table = soup.find('table', {'class': 'js-csv-data csv-data js-file-line-container'})
+def read_data(file_name):
+    soup = BeautifulSoup(open("faculty.csv"), "html.parser")
+    table = soup.find('table', {'class': 'js-csv-data csv-data js-file-line-container'})
+    return([[td.text for td in tr.find_all('td')][1:] for tr in table.find_all('tr', {'class': "js-file-line"})][1:])
 
-
-data = [[td.text for td in tr.find_all('td')][1:] 
-    for tr in table.find_all('tr', {'class': "js-file-line"})][1:]
-
+data=read_data("faculty.csv")
+   
 
 #Q1
 #_________________________________________________________________________________________________
