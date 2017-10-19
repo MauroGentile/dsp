@@ -5,6 +5,7 @@ Biased mean: 2.404
 
 MY CODE: (I preferred to use my own code. It is probabily less efficient but I think that it is a good Python practise 
 
+```python
 resp = nsfg.ReadFemResp()
 
 hist = {}
@@ -22,5 +23,5 @@ biased_mean=sum([biased_pmf[x]*x for x in hist])
 
 print("Actual mean: " + str(mean/lines))
 print("Biased mean: " + str(biased_mean))
-
+```
 
