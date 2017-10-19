@@ -3,7 +3,8 @@
 Actual mean: 1.024  
 Biased mean: 2.404
 
-MY CODE: (I preferred to use my own code. It is probabily less efficient but I think that it is a good Python practise 
+MY CODE: (I preferred to use my own code rather than using ThinkStat library. 
+My code is probabily less efficient but I think that it is a good Python practise)
 
 ```python
 resp = nsfg.ReadFemResp()
