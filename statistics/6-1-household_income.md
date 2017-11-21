@@ -1,17 +1,15 @@
 [Think Stats Chapter 6 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2007.html#toc60) (household income)
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
 
 
 
 SOLUTIONS:
 
-mean: 74278.71
-median: 51226.45
-skewness: 4.95
-pearson_median_skewness: 0.74
-Fraction with income below the mean: 0.6600
+mean: 74278.71    
+median: 51226.45   
+skewness: 4.95   
+pearson_median_skewness: 0.74    
+Fraction with income below the mean: 0.6600   
 
 
 
