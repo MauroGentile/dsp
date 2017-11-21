@@ -1,6 +1,6 @@
 [Think Stats Chapter 7 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2008.html#toc70) (weight vs. age)
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+
 
 
 Scatterplot between mothers' age and child'weight makes one suspect that these variable are not correlated eachother since the cloud of dots is roughly a cahotic circle.
