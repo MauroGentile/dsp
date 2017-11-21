@@ -5,9 +5,10 @@
 
 Scatterplot between mothers' age and child'weight makes one suspect that these variable are not correlated eachother since the cloud of dots is roughly a cahotic circle.
 
-The near 0 Correlation and Spearman correlation coefficients (0.069, 0.097 resectively) gives a formal matematical evidence to the graphical intuition.
+The near 0 Correlation and Spearman correlation coefficients (0.069, 0.097 resectively) gives a formal matematical evidence to the graphical intuition.   
 
-
+MY CODE
+```python
 
 bins = np.arange(min(live.agepreg), max(live.agepreg), 5)
 indices = np.digitize(live.agepreg, bins)
@@ -27,3 +28,4 @@ thinkplot.Config(xlabel="Mothers'age",
                      legend=True, loc="best")
     
 
+```
